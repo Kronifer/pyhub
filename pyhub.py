@@ -12,7 +12,7 @@ except:
     passwd = input("Enter Github password. You only do this once. ")
     data = {'name': usrname, 'password': passwd}
     with open('userinfo.json', 'w') as file:
-        data = json.dump(data, file)
+        json.dump(data, file)
 
 g = Github(usrname, passwd)
 os.system('cls' if os.name == 'nt' else 'clear')
